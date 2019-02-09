@@ -1,0 +1,31 @@
+{
+  "name": "generator-officeaddin",
+  "version": "0.0.1",
+  "description": "Yeoman Generator for Office Add-ins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "officeaddin",
+    "yeoman-generator",
+    "office-addin",
+    "add-in",
+    "outlook",
+    "excel",
+    "word",
+    "powerpoint",
+    "onenote",
+    "project"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@mojotech/json-type-validation": "^3.1.0",
+    "yeoman-generator": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/yeoman-generator": "^3.0.1",
+    "typescript": "^3.3.3"
+  }
+}
