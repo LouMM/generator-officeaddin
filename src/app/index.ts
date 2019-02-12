@@ -1,7 +1,8 @@
 import Generator, { Question } from 'yeoman-generator';
 
-import { host, hosts } from './config/hosttypes';
-import { projectType, projectTypes } from './config/projecttypes';
+import { host, hosts } from './config/hosts';
+import { projectType, projectTypes } from './config/projects';
+
 
 module.exports = class extends Generator {
   // The name `constructor` is important here
@@ -42,16 +43,21 @@ module.exports = class extends Generator {
     }]
 
 
-  
+    let pjs = JSON.stringify(projects);
+    let x = projectTypes.deserialize(pjs);
+    
 
-
+    
+    const self: this = this;
+    this.log('What is THIS right now: ' + JSON.stringify(this));
     let usrAnswer = await this.prompt({
       type: 'input',
       name: 'username',
       message: 'What\'s your GitHub username',
       store: true
     });
-
+    
+    
     this.log(JSON.stringify(usrAnswer));
   }
 
